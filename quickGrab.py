@@ -13,7 +13,8 @@ def screenGrab():
     x2 = rect[2] 
     y2 = rect[3] 
 
-    box = (x1, y1, x2, y2)
+    box = (x1+10, y1+35, x2-10, y2-10)
+    time.sleep(2)
     im = ImageGrab.grab(box)
     im.save(os.getcwd() + '\\full_snap__' + str(int(time.time())) +
 '.png', 'PNG')
